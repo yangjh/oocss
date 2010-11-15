@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Test Page 1 - Global Padding/Margin Reset</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<link rel="stylesheet" id="baseStyle" type="text/css" href="core/base.css" />
+
+</head>
+<body>
+<script type="text/javascript">
+	$(function(){
+		$('input[lnkStyle]').toggle(function(){
+//			$(this).data("value", function(index, value)
+//			{
+//				return value ? value : this.value;
+//			});
+			
+			var lnkStyle = $(this).val("Base.css").attr("lnkStyle");
+
+			$("#" + lnkStyle).attr("href", function(index, value){
+				return value + "1";
+			});
+		}, function(){
+			var lnkStyle = $(this).val("Base.css").attr("lnkStyle");
+			$("#" + lnkStyle).attr("href", function(index, value){
+				return value.substring(0, value.length - 1);
+			});
+		});
+	});
+</script>
+<input lnkStyle="baseStyle" type="button" value="Base.css" />
+<h1>Heading level 1</h1>
+<p>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+	magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+</p>
+
+<h2>Heading level 2</h2>
+
+<p>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+	magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+</p>
+
+<h3>Heading level 3</h3>
+
+<p>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+	magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+</p>
+<h4>Heading level 4</h4>
+
+<p>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+	magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+
+</p>
+<h5>Heading level 5</h5>
+
+<p>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+	magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+</p>
+<h6>Heading level 6</h6>
+
+<p>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+	magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+</p>
+<blockquote>
+	<p><strong>This is a blockquote</strong>: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+		nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+		exerci tation ullamcorper suscipit.</p>
+</blockquote>
+<p>
+
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+	magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+</p>
+<ul>
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+	<li>Item 4</li>
+</ul>
+
+<p>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+	magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+</p>
+<ol>
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+	<li>Item 4</li>
+
+</ol>
+<p>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+	magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+</p>
+<dl>
+	<dt>definition term</dt>
+	<dd>definition description</dd>
+	<dt>definition term</dt>
+	<dd>definition description</dd>
+
+</dl>
+<p>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+	magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+</p>
+
+<form action="" method="post" name="survey">
+	<fieldset>
+		<legend>
+			Are you:
+		</legend>
+		<input id="malegender" name="gender" type="radio" value="male">
+
+		<label for="malegender">male</label><br>
+		<input id="femalegender" name="gender" type="radio" value="female">
+		<label for="femalegender">female</label>
+	</fieldset>
+	<fieldset>
+		<legend>
+			How old are you?
+		</legend>
+
+		<input id="under13" name="age" type="radio" value="under 13">
+		<label for="under13">Under 13</label><br>
+		<input id="age13-18" name="age" type="radio" value="13-18">
+		<label for="age13-18">13-18</label><br>
+		<input id="age19-30" name="age" type="radio" value="19-30">
+		<label for="age19-30">19-30</label><br>
+		<input id="age31-45" name="age" type="radio" value="31-45">
+
+		<label for="age31-45">31-45</label><br>
+		<input id="age46-60" name="age" type="radio" value="46-60">
+		<label for="age46-60">46-60</label><br>
+		<input id="age61-80" name="age" type="radio" value="61-80">
+		<label for="age61-80">61-80</label><br>
+		<input id="over80" name="age" type="radio" value="over 80">
+
+		<label for="over80">Over 80</label>
+	</fieldset>
+
+	<fieldset>
+		<legend>
+			Where do you live?
+		</legend>
+		<input id="sydney" name="live" type="radio" value="sydney">
+		<label for="sydney">Sydney</label><br>
+		<input id="regionalnsw" name="live" type="radio" value="regional nsw">
+		<label for="regionalnsw">Regional NSW</label><br>
+
+		<input id="otherstates" name="live" type="radio" value="other state of Australia">
+		<label for="otherstates">Other state of Australia</label><br>
+		<input id="overseas" name="live" type="radio" value="overseas">
+		<label for="overseas">Overseas (please specify country)</label><br>
+		<input name="country" type="text" size="40">
+	</fieldset>
+	<p>
+		<input name="Submit" type="submit" value="submit">
+	</p>
+</form>
+<p>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+	magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+</p>
+<address>
+	6 College Street, Sydney 2004
+</address>
+
+</body>
+</html>
